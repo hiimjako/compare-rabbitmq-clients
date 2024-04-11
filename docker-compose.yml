@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  docker-tc:
+    image: lukaszlach/docker-tc
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - NET_ADMIN
+    network_mode: "host"
+
+  rabbitmq:
+    image: rabbitmq:3.13.1-management-alpine
+    hostname: rabbitmq
+    ports:
+      - "5552:5552"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq/enabled_plugins.conf:/etc/rabbitmq/enabled_plugins
+    networks:
+      - rabbitmq-perf-net
+
+  stream-producer:
+    image: pivotalrabbitmq/go-stream-perf-test
+    container_name: stream-producer
+    networks:
+      - rabbitmq-perf-net
+    command: >
+      --uris rabbitmq-stream://guest:guest@rabbitmq:5552/ 
+      --publishers 1 
+      --consumers 0 
+      --streams measurement 
+      --max-length-bytes=20GB 
+      --variable-body 500 
+      --time 45
+
+networks:
+  rabbitmq-perf-net:
+    driver: bridge

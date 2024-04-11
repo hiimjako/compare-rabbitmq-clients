@@ -29,7 +29,7 @@ file=$file.log
 
 if [ "$kind" = "java" ]; then
     docker run -it --rm \
-        --network rabbitmq-perf-net \
+        --network compare-rabbit-stream-clients_rabbitmq-perf-net \
         $delay_options \
         pivotalrabbitmq/stream-perf-test \
         --uris rabbitmq-stream://guest:guest@rabbitmq:5552 \
@@ -39,7 +39,7 @@ fi
 
 if [ "$kind" = "go" ]; then
     docker run -it --rm \
-        --network rabbitmq-perf-net \
+        --network compare-rabbit-stream-clients_rabbitmq-perf-net \
         $delay_options \
         pivotalrabbitmq/go-stream-perf-test \
         --uris rabbitmq-stream://guest:guest@rabbitmq:5552/ \

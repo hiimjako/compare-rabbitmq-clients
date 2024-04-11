@@ -3,13 +3,13 @@
 all: env fill-queue run-go run-java
 
 env:
-	./scripts/create-env.sh
+	docker compose up docker-tc rabbitmq -d
 
 clear:
-	./scripts/clear-env.sh
+	docker compose down
 
 fill-queue:
-	./scripts/produce-messages.sh
+	docker compose up stream-producer
 
 run-go:
 	./scripts/run-consumer.sh --kind go --delay 5
