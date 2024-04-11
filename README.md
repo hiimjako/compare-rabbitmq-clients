@@ -28,3 +28,4 @@ In the [benchmark](./benchmark/) directory, you'll find the results from my loca
 - With a 10ms delay, it seems the Java client is around 22x faster.
 
 It appears that there are differences in how the client handles connections or things like that.
+Also, in the java client it seems that the reduction in performance is about linear with respect to the increase in latency (as we should expect, I guess), while in the go client it seems much steeper.
