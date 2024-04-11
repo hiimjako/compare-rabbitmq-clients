@@ -20,7 +20,7 @@ if [ "$kind" != "go" ] && [ "$kind" != "java" ]; then
 fi
 
 delay_options=""
-file="../$kind"
+file="$(pwd)/$kind"
 if [ "$delay" > 0 ]; then
     file=$file-delay
     delay_options="--label com.docker-tc.enabled=1 --label com.docker-tc.delay=${delay}ms"
@@ -33,7 +33,7 @@ if [ "$kind" = "java" ]; then
         $delay_options \
         pivotalrabbitmq/stream-perf-test \
         --uris rabbitmq-stream://guest:guest@rabbitmq:5552 \
-        -x=0 -y=1 -st=measurement -o=first -z=10 | tee $file
+        -x=0 -y=1 -st=measurement -o=first -z=10 | tee "$file"
     exit
 fi
 
@@ -43,6 +43,6 @@ if [ "$kind" = "go" ]; then
         $delay_options \
         pivotalrabbitmq/go-stream-perf-test \
         --uris rabbitmq-stream://guest:guest@rabbitmq:5552/ \
-        --publishers=0 --consumers=1 --streams=measurement --consumer-offset=first --max-length-bytes=20GB --time=10 | tee $file
+        --publishers=0 --consumers=1 --streams=measurement --consumer-offset=first --max-length-bytes=20GB --time=10 | tee "$file"
     exit
 fi
