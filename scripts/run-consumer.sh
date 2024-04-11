@@ -21,7 +21,7 @@ fi
 
 delay_options=""
 file="$(pwd)/$kind"
-if [ "$delay" > 0 ]; then
+if [ "$delay" -gt 0 ]; then
     file=$file-delay
     delay_options="--label com.docker-tc.enabled=1 --label com.docker-tc.delay=${delay}ms"
 fi
