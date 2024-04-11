@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: env fill-queue run-go run-java clear
+all: env fill-queue run-go run-java
 
 env:
 	chmod +x ./scripts/create-env.sh && ./scripts/create-env.sh
