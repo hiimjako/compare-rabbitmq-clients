@@ -1,0 +1,12 @@
+1, published 0 msg/s, confirmed 0 msg/s, consumed 857176 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 7689
+2, published 0 msg/s, confirmed 0 msg/s, consumed 893821 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 7935
+3, published 0 msg/s, confirmed 0 msg/s, consumed 975823 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8024
+4, published 0 msg/s, confirmed 0 msg/s, consumed 975823 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8067
+5, published 0 msg/s, confirmed 0 msg/s, consumed 958464 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8093
+6, published 0 msg/s, confirmed 0 msg/s, consumed 967623 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8109
+7, published 0 msg/s, confirmed 0 msg/s, consumed 943023 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8121
+8, published 0 msg/s, confirmed 0 msg/s, consumed 950272 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8130
+9, published 0 msg/s, confirmed 0 msg/s, consumed 1000424 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8137
+10, published 0 msg/s, confirmed 0 msg/s, consumed 951223 msg/s, latency median/75th/95th/99th 0/0/0/0 ms, chunk size 8143
+
+Summary: published 0 msg/s, confirmed 0 msg/s, consumed 947209 msg/s, latency 95th 0 ms, chunk size 8143

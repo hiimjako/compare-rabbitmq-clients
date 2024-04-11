@@ -18,3 +18,13 @@ To clear the environment:
 ```sh
 make clear
 ```
+
+## Benchmark
+
+In the [benchmark](./benchmark/) directory, you'll find the results from my local machine. It appears that:
+
+- Without any delay, the Java client is 4x faster in a local environment.
+- With a 5ms delay, it seems the Java client is around 20x faster.
+- With a 10ms delay, it seems the Java client is around 22x faster.
+
+It appears that there are differences in how the client handles connections or things like that.
