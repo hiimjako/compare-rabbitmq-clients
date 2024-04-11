@@ -1,14 +1,14 @@
 #!/bin/bash 
 
 # Set default value of delay flag to false
-delay=false
+delay=0
 kind=""
 
 # Loop through command line arguments
 while [[ "$#" -gt 0 ]]; do
   case "$1" in
-        --debug) debug=true ;; # If --debug flag is provided, set debug to true
-        --kind) kind="$2"; shift ;; # Set the kind variable
+        --delay) delay=$2 ; shift ;; 
+        --kind) kind="$2"; shift ;; 
         *) echo "Unknown option: $1" ;;
     esac
     shift
@@ -20,10 +20,10 @@ if [ "$kind" != "go" ] && [ "$kind" != "java" ]; then
 fi
 
 delay_options=""
-file=$kind
-if [ "$delay" = true ]; then
+file="../$kind"
+if [ "$delay" > 0 ]; then
     file=$file-delay
-    delay_options="--label com.docker-tc.enabled=1 --label com.docker-tc.delay=5ms"
+    delay_options="--label com.docker-tc.enabled=1 --label com.docker-tc.delay=${delay}ms"
 fi
 file=$file.log
 
