@@ -1,0 +1,16 @@
+2024/04/11 13:50:59 [info] - Silent (1.3.2) Simulation, url: [rabbitmq-stream://guest:guest@rabbitmq:5552/] publishers: 0 consumers: 1 streams: [measurement] 
+2024/04/11 13:50:59 [info] - Declaring streams: [measurement]
+2024/04/11 13:50:59 [info] - stream measurement, meta data: leader rabbitmq:5552, followers  
+2024/04/11 13:50:59 [info] - End Init streams :[measurement]
+2024/04/11 13:50:59 [info] - Starting 1 consumers...
+2024/04/11 13:50:59 [info] - Starting consumer number: measurement-0, form first
+2024/04/11 13:51:00 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 142040.0 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:01 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 144748.0 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:02 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 145650.7 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:03 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 146065.5 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:04 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 146372.8 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:05 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 147918.7 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:06 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 147768.1 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:07 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 147784.5 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:08 [info] - Published      0.0 msg/s | Confirmed      0.0 msg/s |  Consumed 148674.7 msg/s |   ND  |   ND  |  msg sent:   0  |
+2024/04/11 13:51:09 [info] - Stopping after 10 seconds
